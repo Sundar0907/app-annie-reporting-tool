@@ -1,0 +1,2 @@
+class FinalReport < ApplicationRecord
+end

@@ -1,0 +1,48 @@
+<h1>Generate Report</h1>
+        <%= form_with(url: "/postinput", method: "post", local: true) do %>
+
+
+<div class="form-row">
+  <div class="col">
+  </div>
+</div>
+<div class="form-row">
+
+    <div class="col">
+        <%= label_tag(:startDate, "Start Date", class: 'form-control')  %> 
+        <%= label_tag(:endDate, "End Date", class: 'form-control')  %> 
+    </div>
+    <div class="col">
+     <%= date_field(:startDate, :startDate, class: 'form-control') %> </td>
+    <%= date_field(:endDate, :endDate, class: 'form-control') %>
+    </div>
+</div>
+         
+<div class="form-check">
+    <%= check_box_tag(:app, :app,  class: 'form-check-input') %>
+    <%= label_tag(:app, "App", class: 'form-check-label')  %> 
+</div>
+<div class="form-check">
+    <%= check_box_tag(:country, :country, class: 'form-check-input') %>
+    <%= label_tag(:country, "Country", class: 'form-check-label')  %> 
+</div>
+<div class="form-check">
+    <%= check_box_tag(:connection, :connection, class: 'form-check-input') %> 
+    <%= label_tag(:connection, "Connection", class: 'form-check-label')  %>
+</div>
+<div class="form-check">
+    <%= check_box_tag(:platform, :platform, class: 'form-check-input') %> 
+    <%= label_tag(:platform, "Platform",class: 'form-check-label')  %> 
+</div>
+
+<% if @errorArray.size !=0 %>
+    <% @errorArray.each do |data| %>
+    <div class="alert alert-danger" role="alert">
+    <%= data%>   
+    </div>
+    <% end %>
+<%end%>
+
+<button type="Generate Report" class="btn btn-primary btn-lg btn-block">Generate Report</button>
+
+<% end %>

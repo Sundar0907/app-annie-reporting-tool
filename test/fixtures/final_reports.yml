@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-10-27
+  country: MyString
+  platform: MyString
+  app: MyString
+  connection: MyString
+  ad_revenue: 1.5
+  impressions: 1.5
+  cpm: 1.5
+  created_at: 2020-10-27 19:29:43
+  updated_at: 2020-10-27 19:29:43
+
+two:
+  date: 2020-10-27
+  country: MyString
+  platform: MyString
+  app: MyString
+  connection: MyString
+  ad_revenue: 1.5
+  impressions: 1.5
+  cpm: 1.5
+  created_at: 2020-10-27 19:29:43
+  updated_at: 2020-10-27 19:29:43
